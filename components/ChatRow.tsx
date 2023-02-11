@@ -20,7 +20,7 @@ function ChatRow( {id}: Props ) {
 	const { data: session } = useSession();
 	const [active, setActive] = useState(false);
 	
-	const [messages] = useCollection(collection(db, 'users', session?.user?.email!, 'chat', id, 'messages'));
+	const [messages] = useCollection(collection(db, 'users', session?.user?.email!, 'chats', id, 'messages'));
 
 	useEffect(() => {
 		if (!pathname) return;
@@ -33,6 +33,7 @@ function ChatRow( {id}: Props ) {
 		router.replace('/');
 	}
 
+	// console.log('message', messages?.docs[0]?.data().text)
 
   return (
 	<Link href={`/chat/${id}`} className={`chatRow justify-center ${active && "bg-gray-700/50"}`}>

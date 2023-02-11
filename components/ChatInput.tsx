@@ -41,7 +41,7 @@ function ChatInput({ chatId }: Props) {
 				avatar: session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`,
 			}
 		}
-		console.log('message', message);
+		// console.log('message', message);
 		await addDoc(collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), 
 			message
 		);
