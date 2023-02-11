@@ -7,7 +7,7 @@ type Props = {
 	}
 }
 
-function ChatPage({ params : { id }} : Props) {
+function ChatPage({ params : { id } } : Props) {
 
   return (
 	<div className="flex flex-col h-screen overflow-hidden">

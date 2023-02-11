@@ -1,8 +1,9 @@
-import { getApps } from "firebase/app";
+import { getApps } from "firebase-admin/app";
+import admin from "firebase-admin";
 
-var admin = require("firebase-admin");
 
-// var serviceAccount = require("path/to/serviceAccountKey.json");
+
+// var serviceAccount = require("./serviceAccountKey.json");
 
 const serviceAccount = JSON.parse(
 	process.env.FIREBASE_SERVICE_ACCOUNT_KEY as string
@@ -10,7 +11,7 @@ const serviceAccount = JSON.parse(
 
 if (!getApps().length){
 	admin.initializeApp({
-		credential: admin.credential.cert(serviceAccount)
+		credential: admin.credential.cert(serviceAccount),
 	});
 }
 

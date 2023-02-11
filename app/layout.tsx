@@ -13,7 +13,7 @@ export default async function RootLayout({
 }) {
 
   const session = await getServerSession(authOptions)
-  // console.log(session)
+  console.log(session)
   return (
     <html>
       <head />
@@ -33,15 +33,13 @@ export default async function RootLayout({
               <ClientProvider />
 
               <div className='bg-[#343541] flex-1'>
-              {children}
+                {children}
               </div>
 
             </div>
           )}
           </SessionProvider>
-        </body>
-      
-
+        </body> 
     </html>
   )
 }
