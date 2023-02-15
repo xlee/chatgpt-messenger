@@ -9,10 +9,7 @@ type Props = {
 function Message({ message } : Props) {
 
 	const isCode = ["{", "}", ";", ":", "="];
-	// const isCode = "/{|}|=|;|:|/"
-
-  const isChatGPT = message.user.name === "ChatGPT";
-//   console.log('message', message.text);
+  	const isChatGPT = message.user.name === "ChatGPT";
 
   return (
 	<div className={`py-5 text-white ${isChatGPT && "bg-[#434654]"}`}>
