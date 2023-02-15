@@ -13,7 +13,7 @@ type Props = {
 	id: string, 
 }
 
-function ChatRow( {id}: Props ) {
+function ChatRow( { id } : Props ) {
 
 	const pathname = usePathname();
 	const router = useRouter();
