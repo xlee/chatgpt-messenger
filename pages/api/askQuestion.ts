@@ -33,7 +33,7 @@ export default async function handler(
 		user: {
 			_id: 'ChatGPT', 
 			name: 'ChatGPT', 
-			avatar: 'https://links.papareact.com/89k',
+			avatar: 'https://i.imgur.com/5nRDqAU.jpeg',
 
 		},
 	};
