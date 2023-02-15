@@ -20,12 +20,9 @@ function ChatInput({ chatId }: Props) {
 		fallbackData: 'text-davinci-003'
 	})
 
-
-
-
 	// console.log('sending')
 	const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
-		// e.preventDefault()
+		e.preventDefault()
 		if (!prompt) return;
 
 		const input = prompt.trim();
